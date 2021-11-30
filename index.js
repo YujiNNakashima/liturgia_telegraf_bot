@@ -12,7 +12,7 @@ bot.start((ctx) => {
     const currentHour = new Date().getHours()
     const currentPrayer = generateHour(currentHour)
     
-    ctx.reply(`${currentHour}: rezar ${currentPrayer}`)
+    ctx.reply(`${currentHour}h: rezar ${currentPrayer}`)
   }, null, true, 'America/Sao_Paulo');
 
   job.start();

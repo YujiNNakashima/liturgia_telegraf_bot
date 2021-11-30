@@ -1,5 +1,8 @@
 {
   "name": "liturgia_das_horas_bot",
+  "engines": {
+    "node": "14.x"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
