@@ -1,14 +1,14 @@
 module.exports = generateHour = (currentHour) => { 
   switch(currentHour) {
     case 4:
-      return 'laudes';
+      return 'as laudes';
     case 9:
-      return 'hora terça';
+      return 'a hora terça';
     case 12:
-      return 'hora sexta';
+      return 'a hora sexta';
     case 15:
-      return 'hora nona';
+      return 'a hora nona';
     case 18:
-      return 'vésperas'; 
+      return 'as vésperas'; 
     }
 }
