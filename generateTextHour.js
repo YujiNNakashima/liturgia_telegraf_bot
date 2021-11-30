@@ -9,6 +9,6 @@ module.exports = generateHour = (currentHour) => {
     case 15:
       return 'a hora nona';
     case 18:
-      return 'as vésperas'; 
+      return 'as vésperas';
     }
 }
