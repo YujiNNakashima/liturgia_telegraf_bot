@@ -5,7 +5,7 @@ const {  zonedTimeToUtc } = require('date-fns-tz')
 
 require('dotenv').config()
 
-const bot = new Telegraf(process.env.BOT_TOKEN) 
+const bot = new Telegraf(process.env.BOT_TOKEN)
 bot.start((ctx) => {
 
   ctx.reply(`Olá, ${ctx.from.first_name}, bem-vindo ao bot da liturgia das horas`)
