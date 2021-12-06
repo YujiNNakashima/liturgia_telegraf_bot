@@ -22,13 +22,16 @@ bot.start((ctx) => {
   job.start();
 
 
-  cron.schedule('0 4,9,12,15,18 * * 0-7', () => {
+  const task = cron.schedule('0 4,9,12,15,18 * * 0-7', () => {
     const currentHour = utcToZonedTime(new Date(), tz).getHours()
     const currentPrayer = generateHour(currentHour)
     ctx.reply(`${currentHour}h - rezar ${currentPrayer}`)  }, {
     scheduled: true,
     timezone: tz
   });
+
+  task.start();
+
 
 }) 
 
