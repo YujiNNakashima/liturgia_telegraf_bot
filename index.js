@@ -1,5 +1,4 @@
 const {Telegraf} = require('telegraf') 
-const cron = require('node-cron');
 const CronJob = require('cron').CronJob;
 
 const generateHour = require('./generateTextHour')
@@ -20,19 +19,6 @@ bot.start((ctx) => {
   }, null, true, tz);
 
   job.start();
-
-
-  const task = cron.schedule('0 4,9,12,15,18 * * 0-7', () => {
-    const currentHour = utcToZonedTime(new Date(), tz).getHours()
-    const currentPrayer = generateHour(currentHour)
-    ctx.reply(`${currentHour}h - rezar ${currentPrayer}`)  }, {
-    scheduled: true,
-    timezone: tz
-  });
-
-  task.start();
-
-
 }) 
 
 bot.launch()
