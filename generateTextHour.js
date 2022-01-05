@@ -12,6 +12,5 @@ module.exports = generateHour = (currentHour) => {
       return 'as vésperas';
     default:
       return ''
-
     }
 }
